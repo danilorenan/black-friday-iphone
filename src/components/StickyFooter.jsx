@@ -5,7 +5,7 @@ const StickyFooter = ({ numeroWpp }) => {
     const wppLink = `https://wa.me/${numeroWpp}?text=Olá, gostaria de garantir o iPhone 14 Pro Max na oferta da Black Friday!`;
 
     return (
-        <div className="fixed bottom-0 left-0 w-full z-50 bg-black border-t border-white/20 p-4">
+        <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100%', zIndex: 9999, backgroundColor: 'black' }} className="border-t border-white/20 p-4">
             <div className="container mx-auto max-w-md">
                 <a
                     href={wppLink}
