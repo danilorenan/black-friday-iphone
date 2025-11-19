@@ -2,7 +2,7 @@ import React from 'react';
 import { MessageCircle } from 'lucide-react';
 
 const StickyFooter = ({ numeroWpp }) => {
-    const wppLink = `https://wa.me/${numeroWpp}?text=Olá, gostaria de garantir o iPhone 14 Pro Max na oferta da Black Friday!`;
+    const wppLink = `https://wa.me/${numeroWpp}?text=Olá, gostaria de garantir o iPhone 17 Pro Max na oferta da Black Friday!`;
 
     return (
         <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100%', zIndex: 9999, backgroundColor: 'black' }} className="border-t border-white/20 p-4">
