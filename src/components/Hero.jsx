@@ -30,7 +30,7 @@ const Hero = ({ precoProduto, precoOriginal }) => {
 
             <div className="container mx-auto max-w-md text-center">
                 <h1 className="text-4xl md:text-5xl font-black mb-4 leading-none tracking-tighter text-white uppercase">
-                    iPhone 14 Pro Max
+                    iPhone 17 Pro Max Orange 256gb
                     <span className="block text-xl md:text-2xl font-normal mt-2 text-gray-200 normal-case">A oferta definitiva da Black Friday.</span>
                 </h1>
 

@@ -20,7 +20,7 @@ const Benefits = () => {
         },
         {
             icon: <CreditCard className="w-8 h-8 text-purple-400" />,
-            title: "12x Sem Juros",
+            title: "12x",
             desc: "No cartão de crédito"
         }
     ];
