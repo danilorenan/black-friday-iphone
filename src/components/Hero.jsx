@@ -1,8 +1,19 @@
 import React from 'react';
 import { ShieldCheck, Truck, Battery, CreditCard } from 'lucide-react';
-import iphoneImg from '../assets/iphone.png';
+import iphone14Img from '../assets/iphone-14.png';
+import iphone15Img from '../assets/iphone-15.png';
+import iphone16Img from '../assets/iphone-16.png';
+import iphone17Img from '../assets/iphone-17.png';
 
-const Hero = ({ precoProduto, precoOriginal }) => {
+const modelsConfig = {
+    '14': { name: 'iPhone 14 Pro Max', image: iphone14Img },
+    '15': { name: 'iPhone 15 Pro Max', image: iphone15Img },
+    '16': { name: 'iPhone 16 Pro Max', image: iphone16Img },
+    '17': { name: 'iPhone 17 Pro Max', image: iphone17Img },
+    'default': { name: 'iPhone 17 Pro Max', image: iphone17Img }
+};
+
+const Hero = ({ precoProduto, precoOriginal, model }) => {
     // Função para limpar e converter preço em número
     const parsePrice = (priceStr) => {
         if (!priceStr) return 0;
@@ -23,6 +34,8 @@ const Hero = ({ precoProduto, precoOriginal }) => {
     const desconto = valorOriginal - valorAtual;
     const descontoFormatado = formatPrice(desconto);
 
+    const selectedModel = modelsConfig[model] || modelsConfig['default'];
+
     return (
         <section className="pt-24 pb-12 px-4 relative overflow-hidden">
             {/* Background Gradients */}
@@ -30,15 +43,15 @@ const Hero = ({ precoProduto, precoOriginal }) => {
 
             <div className="container mx-auto max-w-md text-center">
                 <h1 className="text-4xl md:text-5xl font-black mb-4 leading-none tracking-tighter text-white uppercase">
-                    iPhone 17 Pro Max Orange 256gb
+                    {selectedModel.name}
                     <span className="block text-xl md:text-2xl font-normal mt-2 text-gray-200 normal-case">A oferta definitiva da Black Friday.</span>
                 </h1>
 
                 {/* Product Image */}
                 <div className="relative my-8 mx-auto w-64 h-80 flex items-center justify-center animate-float">
                     <img
-                        src={iphoneImg}
-                        alt="iPhone 14 Pro Max"
+                        src={selectedModel.image}
+                        alt={selectedModel.name}
                         className="w-full h-full object-contain drop-shadow-2xl"
                     />
                 </div>

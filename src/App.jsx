@@ -11,12 +11,13 @@ function App() {
   const precoProduto = params.get('preco') || '4.299';
   const precoOriginal = params.get('precoOriginal') || '5.899';
   const numeroWpp = params.get('wpp') || '';
+  const model = params.get('model');
 
   return (
     <div className="min-h-screen bg-dark-bg text-white font-sans selection:bg-purple-500/30">
       <Header nomeLoja={nomeLoja} />
       <main>
-        <Hero precoProduto={precoProduto} precoOriginal={precoOriginal} />
+        <Hero precoProduto={precoProduto} precoOriginal={precoOriginal} model={model} />
         <Benefits />
         <SocialProof nomeLoja={nomeLoja} />
       </main>
