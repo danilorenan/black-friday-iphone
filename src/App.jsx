@@ -7,7 +7,8 @@ import StickyFooter from './components/StickyFooter';
 
 function App() {
   const params = new URLSearchParams(window.location.search);
-  const nomeLoja = params.get('loja') || 'iStore';
+  // Garante que espaços e acentos venham corretos da URL
+  const nomeLoja = params.get('loja') || 'iStore'; 
   const precoProduto = params.get('preco') || '4.299';
   const precoOriginal = params.get('precoOriginal') || '5.899';
   const numeroWpp = params.get('wpp') || '';
@@ -18,7 +19,10 @@ function App() {
       <Header nomeLoja={nomeLoja} />
       <main>
         <Hero precoProduto={precoProduto} precoOriginal={precoOriginal} model={model} />
-        <Benefits />
+        
+        {/* MUDANÇA AQUI: Passando o nome da loja para o componente Benefits */}
+        <Benefits nomeLoja={nomeLoja} />
+        
         <SocialProof nomeLoja={nomeLoja} />
       </main>
       <StickyFooter numeroWpp={numeroWpp} />

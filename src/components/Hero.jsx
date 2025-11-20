@@ -1,14 +1,31 @@
 import React from 'react';
 import { ShieldCheck, Truck, Battery, CreditCard } from 'lucide-react';
+import iphone12Img from '../assets/iphone-12.PNG';
+import iphone13Img from '../assets/iphone-13.png';
+import iphone13proImg from '../assets/iphone-13pro.png';
+import iphone12proImg from '../assets/iphone-12pro.png';
+import iphone14proImg from '../assets/iphone-14pro.png';
 import iphone14Img from '../assets/iphone-14.png';
 import iphone15Img from '../assets/iphone-15.png';
+import iphone15proImg from '../assets/iphone-15pro.png';
 import iphone16Img from '../assets/iphone-16.png';
 import iphone17Img from '../assets/iphone-17.png';
 
 const modelsConfig = {
-    '14': { name: 'iPhone 14 Pro Max', image: iphone14Img },
-    '15': { name: 'iPhone 15 Pro Max', image: iphone15Img },
-    '16': { name: 'iPhone 16 Pro Max', image: iphone16Img },
+    '12': { name: 'iPhone 12 128gb', image: iphone12Img },
+    '12pro': { name: 'iPhone 12 Pro 128gb', image: iphone12proImg },
+    '13': { name: 'iPhone 13 128gb', image: iphone13Img },
+    '13pro': { name: 'iPhone 13 Pro 256gb', image: iphone13proImg },
+    '14': { name: 'iPhone 14 128gb', image: iphone14Img },
+    '14pro': { name: 'iPhone 14 Pro 128gb', image: iphone14proImg },
+    '15': { name: 'iPhone 15 128gb', image: iphone15Img },
+    '15pro': { name: 'iPhone 15 Pro 128gb', image: iphone15proImg },
+    '16pro': { name: 'iPhone 16 Pro 128gb', image: iphone16Img },
+
+
+    '14promax': { name: 'iPhone 14 Pro Max', image: iphone14proImg },
+    '15promax': { name: 'iPhone 15 Pro Max', image: iphone15proImg },
+    '16promax': { name: 'iPhone 16 Pro Max', image: iphone16Img },
     '17': { name: 'iPhone 17 Pro Max', image: iphone17Img },
     'default': { name: 'iPhone 17 Pro Max', image: iphone17Img }
 };
