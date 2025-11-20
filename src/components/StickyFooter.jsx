@@ -1,8 +1,13 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 
-const StickyFooter = ({ numeroWpp }) => {
-    const wppLink = `https://wa.me/${numeroWpp}?text=Olá, gostaria de garantir o iPhone 17 Pro Max na oferta da Black Friday!`;
+const StickyFooter = ({ numeroWpp, modelName }) => {
+    
+    // Se por acaso o modelName vier vazio, usamos um fallback "iPhone"
+    const produto = modelName || "iPhone";
+    
+    // Cria o link dinâmico inserindo o nome do modelo na mensagem
+    const wppLink = `https://wa.me/${numeroWpp}?text=Olá, gostaria de garantir meu ${produto} na oferta da Black Friday!`;
 
     return (
         <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100%', zIndex: 9999, backgroundColor: 'black' }} className="border-t border-white/20 p-4">
