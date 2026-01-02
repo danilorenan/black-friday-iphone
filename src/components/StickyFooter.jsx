@@ -7,7 +7,7 @@ const StickyFooter = ({ numeroWpp, modelName }) => {
     const produto = modelName || "iPhone";
     
     // Cria o link dinâmico inserindo o nome do modelo na mensagem
-    const wppLink = `https://wa.me/${numeroWpp}?text=Olá, gostaria de garantir meu ${produto} na oferta da Black Friday!`;
+    const wppLink = `https://wa.me/${numeroWpp}?text=Olá, gostaria de garantir meu ${produto} na oferta de queima de estoque!`;
 
     return (
         <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100%', zIndex: 9999, backgroundColor: 'black' }} className="border-t border-white/20 p-4">

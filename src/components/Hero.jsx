@@ -61,7 +61,7 @@ const Hero = ({ precoProduto, precoOriginal, model }) => {
             <div className="container mx-auto max-w-md text-center">
                 <h1 className="text-4xl md:text-5xl font-black mb-4 leading-none tracking-tighter text-white uppercase">
                     {selectedModel.name}
-                    <span className="block text-xl md:text-2xl font-normal mt-2 text-gray-200 normal-case">A oferta definitiva da Black Friday.</span>
+                    <span className="block text-xl md:text-2xl font-normal mt-2 text-gray-200 normal-case">A oferta definitiva de queima de estoque.</span>
                 </h1>
 
                 {/* Product Image */}

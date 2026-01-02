@@ -10,7 +10,7 @@ const Header = ({ nomeLoja }) => {
                     <span className="text-xl font-bold tracking-tighter">{nomeLoja}</span>
                 </div>
                 <div className="bg-purple-glow/20 border border-purple-500/30 px-3 py-1 rounded-full">
-                    <span className="text-xs font-bold text-purple-300 uppercase tracking-widest">Black Friday 2025</span>
+                    <span className="text-xs font-bold text-purple-300 uppercase tracking-widest">Queima de estoque</span>
                 </div>
             </div>
         </header>
