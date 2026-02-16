@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Benefits from './components/Benefits';
 import SocialProof from './components/SocialProof';
-import StickyFooter from './components/StickyFooter';
+import FloatingCTA from './components/FloatingCTA';
 
 function App() {
   const params = new URLSearchParams(window.location.search);
@@ -24,12 +24,12 @@ function App() {
     '15': { name: 'iPhone 15 128gb', image: '/iphone-15.png' },
     '15pro': { name: 'iPhone 15 Pro 128gb', image: '/iphone-15-pro.png' },
     '16pro': { name: 'iPhone 16 Pro 128gb', image: '/iphone-16-pro.png' },
-    
+
     '14promax': { name: 'iPhone 14 Pro Max', image: '/iphone-14-pro-max.png' },
     '15promax': { name: 'iPhone 15 Pro Max', image: '/iphone-15-pro-max.png' },
     '16promax': { name: 'iPhone 16 Pro Max', image: '/iphone-16-pro-max.png' },
     '17': { name: 'iPhone 17 Pro Max', image: '/iphone-17.png' }, // O fictício/novo
-    
+
     'default': { name: 'iPhone 14 Pro Max', image: '/iphone-14.png' }
   };
 
@@ -43,14 +43,14 @@ function App() {
       <main>
         {/* Passamos o modelKey para o Hero continuar tratando a imagem se necessário */}
         <Hero precoProduto={precoProduto} precoOriginal={precoOriginal} model={modelKey} />
-        
+
         <Benefits nomeLoja={nomeLoja} />
-        
+
         <SocialProof nomeLoja={nomeLoja} />
       </main>
-      
+
       {/* MUDANÇA AQUI: Passamos o nome do modelo escolhido para o Footer */}
-      <StickyFooter numeroWpp={numeroWpp} modelName={selectedModel.name} />
+      <FloatingCTA numeroWpp={numeroWpp} modelName={selectedModel.name} />
     </div>
   );
 }

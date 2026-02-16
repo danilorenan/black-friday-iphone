@@ -1,7 +1,7 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 
-const StickyFooter = ({ numeroWpp, modelName }) => {
+const FloatingCTA = ({ numeroWpp, modelName }) => {
     
     // Se por acaso o modelName vier vazio, usamos um fallback "iPhone"
     const produto = modelName || "iPhone";
@@ -10,7 +10,7 @@ const StickyFooter = ({ numeroWpp, modelName }) => {
     const wppLink = `https://wa.me/${numeroWpp}?text=Olá, gostaria de garantir meu ${produto} na oferta de queima de estoque!`;
 
     return (
-        <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100%', zIndex: 9999, backgroundColor: 'black' }} className="border-t border-white/20 p-4">
+        <div className="fixed bottom-0 left-0 w-full z-[9999] bg-black border-t border-white/20 p-4">
             <div className="container mx-auto max-w-md">
                 <a
                     href={wppLink}
@@ -29,4 +29,4 @@ const StickyFooter = ({ numeroWpp, modelName }) => {
     );
 };
 
-export default StickyFooter;
+export default FloatingCTA;
